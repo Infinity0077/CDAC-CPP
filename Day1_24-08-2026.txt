@@ -1,0 +1,435 @@
+C++ with OOP
+	C++ is an extended version of C Programming.
+C Programming is a POP(Procedure oriented programming).
+C++ Programming is an (Object Oriented Programming)
+
+***
+Program :- 
+		It is a set of instruction.
+		It is used to perform a specific task.
+	--  It is set of instructions which execute one by one. 
+	one time creation and
+	multiple used is a main purpose of program.
+
+(create->compile-Output)
+
+C++ Feature
+	1. It is case sensitive programming lang. All program create in small letters.
+	2. It is used 32 keywords.
+	3. It is execute Top to Bottom but if follow OOP concept then it is execute
+		bottom to top.
+
+Keyword:- All keywords are high light inside the editor. It is used as fix purpose.
+
+Program Structure
+#include<header file>
+main()
+{
+	variable define;
+	Input statement;
+	Process statement;
+	Output statement;
+
+}
+
+main() :- It is entry point of program. 
+		When user compile the program that time application through check 
+		the all instructions.
+
+( )  :- function argument.
+{ } :- group define
+[ ]  :- Size Define
+< > :- header file define
+
+
+Variable:-
+	It is used to store the data.
+	It is place holder.
+		With the variable used stored any type of data inside the memory.
+	        User can't defined variable alone ,it is defined with the help of datatype.
+		Datatype is provide the definition to variable which  type of value stored
+	       inside the variable.
+               ***variable is associated with value.
+	       *** In C and C++ if user not assign any value to variable then by default
+value of variable is a garbage.
+			***Space complexity is depend on variable.
+			***Time complexity is depend on loops.
+
+Very Important
+Datatype                       Capacity
+int					4 Byte
+long int                            8 byte
+float					4 byte		
+long float /double            8 byte
+char                                  1 byte
+
+Note :- every variable is defined as static or dynamic way.
+
+1. 
+int and long int
+	:-  It give the permission to stored any type of integer value up to 4 and 8 byte.
+	    decimal is not allowed.
+
+static                     dynamic
+int a=10;               int x;
+long a=10000;     long int p;
+
+Rules how to defined variable.
+int a;  valid
+int a,b,c; valid
+int rollNo; valid
+int roll no: in valid (space not allowed)
+int roll_no; valid
+int a1,x3;  valid
+int 3x; not valid
+int #a; not valid
+int A:-  valid
+int 5;  in valid.( numerical value is not allowed alone to define variable)
+
+float /double :- It give the permission to defined any type of positive ,negative
+integer and decimal value . It is occupied 4 byte and 8 byte space in a memory.
+static variable                     dynamic variable
+float a=12.365;           		float x;
+double a=2323.455;                double t;
+
+char :- It is stand for character. It give the permission to stored single character
+and collection of character. 
+	In C and C++ each character is occupied 1 byte space in a memory
+
+static variable                  dynamic variable
+char s='A';                       char c;
+char s[10]="CDAC";     char s[30];
+
+Operator   (it is operate the value of variable)
+1.
+Math operator
++   addition
+-   subtraction
+*  multiplication
+/  division
+% mod(return remainder value);
+
+int a=10,b=2,c;
+c=a+b;    c=12
+c=a-b;  c=8
+c=a*b;   c=20
+c=a/b;   c=5
+c=a%b; c=0
+
+2. unary operator
+
+++     increment by 1
+--      decrement by 1
+
+a=10;
+a++;  it is equve valent to  a=a+1   //11
+
+a--;  --------------------------a=a-1   //9
+
+3. Assignment (compare)
+
+== equal to 
+!= not equal to
+> greater than
+>= greater than equal to
+< less than
+<= less than equal to
+a=10   b=10
+a==b  true
+a!=b  false
+a>15;  true
+a>=10;  true
+
+4. Logical operator
+&& and
+||  or
+! not
+
+Function:-
+	Every function required a parameter and with the help of parameter
+every function return a specific value.
+
+In function two different type of function
+1. standard function  :- It is ready with code.
+				    It has fix syntax.
+				    Required Header file.
+2. User Defined Function(UDF)
+	   Function which created by user. but execute using main program.
+or object of class.
+
+Input and Output Operation in C++
+
+C++ give the 
+cin
+and 
+cout  is a input and output statement.
+
+1. cin:- It is stand for console input.
+	    It give the permission to take the value from user using console window.
+	   Using cin user read the value for any dynamic variable and array.
+Syntax
+cin>>variable name;
+Example
+1.
+int a;
+cin>>a;
+10
+
+2 Example. 
+int a,b,c;
+	cin>>a>>b>>c;
+10
+5
+3
+
+3 Example
+int a,b;
+float c;
+cin>>a>>b>>c;
+10
+20
+3.5
+
+
+cout
+	It is stand for console output.
+	It is used with two different purpose.
+1. Print any type of message on output screen
+	Syntax
+	cout<<"Message";
+		endl or \n for new line with cout
+Syntax
+cout<<"Hello\n"<<"Friends";
+Hello
+Friends
+2. print the value of variable.
+Syntax
+cout<<variable;
+Example
+int a;
+cin>>a;  15
+cout<<a;  15;
+
+**** cin and cout is execute with the help of iostream.
+iostream is a combination of istream, ostream and stream.
+
+Simple program
+/*Write a program print message*/
+
+#include<iostream>
+using namespace std;
+main()
+{
+cout<<"Welcome PGCP-AC Aug 26 Batch"<<endl; 
+cout<<"Do Study...";
+}
+----------------------------/*Write a program print addition of two number*/
+
+#include<iostream>
+using namespace std;
+main()
+{
+int a=10,b=5,c;
+c=a+b;
+cout<<"Addition ="<<c;
+}
+-----------------------------------------------
+/*Write a program scan two number and calculate the addition of number*/
+
+#include<iostream>
+using namespace std;
+main()
+{
+int a,b,c;
+cout<<"Enter two numbers";
+cin>>a>>b;
+c=a+b;
+cout<<"Addition ="<<c;
+}
+--------------------------
+/*Write a program scan number
+and print square and cube of number
+
+Enter number 2
+square =4
+cube =16
+
+*/
+
+#include<iostream>
+using namespace std;
+main()
+{
+int n,sq,cb;
+cout<<"Enter value for n";
+cin>>n;
+sq=n*n;
+cb=n*n*n;
+cout<<"\nSquare ="<<sq;
+cout<<"\nCube ="<<cb;
+
+}
+
+-----------------------------------------
+/*Write a program scan year
+and print 
+months and days
+
+Enter year =2
+months=24
+days=720
+
+*/
+
+#include<iostream>
+using namespace std;
+main()
+{
+int n,month,days;
+cout<<"Enter Year";
+cin>>n;
+month=n*12;
+days=n*365;
+cout<<"\nYear ="<<n;
+cout<<"\nMonth ="<<month;
+cout<<"\nDays ="<<days;
+
+}
+
+--------------------------------
+
+/*Write a program scan one number and
+update number with orignal value + half value(single variable)
+n=100
+n=150
+
+
+*/
+
+#include<iostream>
+using namespace std;
+main()
+{
+int n;
+cout<<"Enter value for n";
+cin>>n;
+cout<<"\nBefore ="<<n;
+n=n+n/2;
+cout<<"\nafter ="<<n;
+}
+-------------------------
+/*Write a program which implment the bank fixed deposit
+formula
+si=p*r*n/100;
+amount=p+si;
+
+
+
+*/
+
+#include<iostream>
+using namespace std;
+main()
+{
+int p,n;
+float r,si,amount;
+cout<<"Enter principal amount";
+cin>>p;
+cout<<"Enter Rate of interest";
+cin>>r;
+cout<<"Enter Number of year";
+cin>>n;
+si=p*r*n/100;
+amount=p+si;
+cout<<"\nSimple Interest ="<<si;
+cout<<"\nAmount="<<amount;
+}
+
+-----------------------
+/*
+
+
+
+*/
+
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+main()
+{
+char s,name[20];
+cout<<"Enter character";
+cin>>s;
+cout<<"\nS="<<s;
+cout<<"\nEnter Name";
+cin>>name;
+cout<<"\nName="<<name;
+//or
+cout<<"\nEnter Name";
+gets(name);
+cout<<"\nName="<<name;
+}
+-------------------
+Assignments
+1. Write a program scan rupees and convert in paisa;
+2. Write a program scan hrs and convert in min and seconds.
+3. Write a program scan student details and print marksheet.
+4. Write a program scan product information as
+	product name,rate of product and quantity
+	print amount calculate amount=rate*quantity
+
+
+
+
+
+
+
+
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+	
