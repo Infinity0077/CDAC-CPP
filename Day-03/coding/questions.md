@@ -1,12 +1,27 @@
-# Day 03 Coding Practice
+# Day 03 Coding Practice (Based on for loop, nested loop, arrays intro)
 
-1. Check positive, negative, or zero.
-2. Check leap year.
-3. Find largest among three numbers.
-4. Check vowel or consonant.
-5. Grade calculator using marks.
-6. Electricity bill calculator (slab-based).
-7. Menu-driven area calculator (circle/rectangle/triangle).
-8. Check character type (alphabet/digit/special char).
-9. Validate triangle type (equilateral/isosceles/scalene).
-10. Build simple login check (username pin simulation with if-else).
+## For Loop
+1. Print series 1..n using for loop.
+2. Print series n..1 using for loop.
+3. Print factorial (descending loop).
+4. Print factorial (ascending loop).
+
+## Nested For / Patterns
+5. Print star pyramid up and down (diamond-like without spaces).
+6. Print number pattern:
+   - 1
+   - 1 2
+   - 1 2 3 ...
+7. Print character pattern:
+   - Aa
+   - Aa Bb
+   - Aa Bb Cc ...
+
+## 1D Array
+8. Print static array values index-wise.
+9. Input 5 elements and print array.
+10. Input 5 elements and compute total + average.
+11. Input 5 elements and print maximum with index.
+12. Input 5 elements and compute:
+   - sum of even elements
+   - count of odd elements

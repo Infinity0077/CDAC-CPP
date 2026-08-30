@@ -1,8 +1,16 @@
-# Day 03 Assignment
+# Day 03 Assignment (from class notes)
 
-1. ATM menu simulation using switch-case.
-2. Program for month number to month name + days.
-3. Admission eligibility checker:
-   - min PCM criteria
-   - overall percentage
-   - result as Eligible/Not Eligible
+1. Print Fibonacci series for n terms.
+2. Input number and print reverse number.
+3. Pattern:
+   - A B C D
+   - E F G
+   - H I
+   - J
+4. Input array with positive/negative numbers:
+   - replace all negatives with 0
+   - print total replacements
+5. Input two arrays and store alternate elements into third array.
+6. Input array (positive/negative mixed):
+   - copy only positive numbers into second array
+   - print count of copied elements

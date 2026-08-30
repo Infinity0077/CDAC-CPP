@@ -1,17 +1,10 @@
-# Day 01 Assignment
+# Day 01 Assignment (from class notes)
 
-## Task A
-Create a menu-driven program:
-1. Add two numbers
-2. Subtract two numbers
-3. Multiply two numbers
-4. Divide two numbers
-
-## Task B
-Take basic details (name, age, city) as input and print formatted output.
-
-## Task C
-Write a short note (5 lines each):
-- Compiler
-- Interpreter
-- Difference between C and C++
+1. Write a program to scan rupees and convert to paisa.
+2. Write a program to scan hours and convert to minutes and seconds.
+3. Write a program to scan student details and print marksheet format.
+4. Write a program to scan product details:
+   - product name
+   - rate
+   - quantity
+   - print `amount = rate * quantity`

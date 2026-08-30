@@ -1,12 +1,18 @@
-# Day 05 Coding Practice
+# Day 05 Coding Practice (Based on Day5 string patterns + OOP/classes/constructors)
 
-1. Function to add two numbers.
-2. Function to find maximum of two numbers.
-3. Function to check prime.
-4. Function to calculate factorial (iterative).
-5. Function to calculate factorial (recursive).
-6. Function to generate Fibonacci up to N terms.
-7. Function to check palindrome number.
-8. Function to swap numbers using pointers.
-9. Create menu-driven utility using multiple functions.
-10. Demonstrate global vs local variable behavior.
+## String Practice
+1. Input string and replace all digits with `Z`.
+2. Print string as forward prefix pattern then reverse prefix pattern.
+
+## Class and Object
+3. Create `Book` class with `bookid`, `name`, `cost`; compare 2 books by cost.
+4. Create `Employee` class for 3 employees; compute total and average salary.
+
+## Constructors
+5. Create class with default constructor assigning fixed values.
+6. Product class with fixed `rate` in constructor, compute amount, discount, net amount.
+7. Constructor overloading demo:
+   - default
+   - parameterized (2 args)
+   - parameterized (3 args)
+8. Copy constructor demo: copy one object data to another.

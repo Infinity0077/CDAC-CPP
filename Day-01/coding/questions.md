@@ -1,14 +1,18 @@
-# Day 01 Coding Practice
+# Day 01 Coding Practice (Based on Day1_24-08-2026.txt)
 
-1. Print "Hello CDAC".
-2. Print your name, city, and course in separate lines.
-3. Take two integers and print their sum.
-4. Take radius and print area of circle.
-5. Convert temperature Celsius to Fahrenheit.
-6. Swap two numbers (using third variable).
-7. Swap two numbers (without third variable).
-8. Find ASCII value of a character.
-9. Print size of int, float, char, double using `sizeof`.
-10. Take marks of 5 subjects and print total and percentage.
+1. Print `Welcome PGCP-AC Aug 26 Batch` and `Do Study...` using `cout` and newline.
+2. Add two static integers and print result.
+3. Input two numbers using `cin` and print addition.
+4. Input number and print square and cube.
+5. Input years and convert to months and days.
+6. Input number `n` and update it to `n + n/2` (single variable update).
+7. Implement simple interest and amount:
+   - `si = p*r*n/100`
+   - `amount = p + si`
+8. Input character and print it.
+9. Input name and print it.
+10. Print size of basic datatypes (`int`, `long int`, `float`, `double`, `char`).
 
-> Create separate `.c` file for each question.
+## Practice Extensions
+- Convert rupees to paisa.
+- Convert hours to minutes and seconds.

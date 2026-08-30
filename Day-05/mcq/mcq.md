@@ -1,36 +1,57 @@
-# Day 05 MCQ Practice
+# Day 05 MCQ (OOP, class, object, constructor)
 
-1. Function prototype is used for:
-   - a) loop control
-   - b) telling compiler function signature
-   - c) memory free
-   - d) header guard
+1. C++ class is by default:
+   - a) public
+   - b) private
+   - c) protected
+   - d) static
    - **Answer: b**
 
-2. Recursion must have:
-   - a) goto
-   - b) base condition
-   - c) switch
-   - d) macro
+2. Object is:
+   - a) keyword
+   - b) instance of class
+   - c) header
+   - d) datatype only
    - **Answer: b**
 
-3. Local variable scope is:
-   - a) whole program
-   - b) within function/block
-   - c) header file
-   - d) all files
+3. Constructor name should be:
+   - a) same as main
+   - b) same as class
+   - c) any valid identifier
+   - d) starts with ~
    - **Answer: b**
 
-4. `return` keyword:
-   - a) prints output
-   - b) exits function and optionally gives value
-   - c) declares variable
-   - d) repeats function
+4. Constructor return type:
+   - a) int
+   - b) void
+   - c) no explicit return type
+   - d) float
+   - **Answer: c**
+
+5. Constructor executes:
+   - a) when function is called manually only
+   - b) when object is created
+   - c) after main ends
+   - d) never automatically
    - **Answer: b**
 
-5. `static` local variable:
-   - a) reinitialized every call
-   - b) retains value between function calls
-   - c) global by default
-   - d) invalid in C
+6. Copy constructor generally takes:
+   - a) integer
+   - b) same class reference
+   - c) char pointer
+   - d) no argument
+   - **Answer: b**
+
+7. Data members usually declared in:
+   - a) private section
+   - b) include file
+   - c) switch block
+   - d) loop body
+   - **Answer: a**
+
+8. Public members are accessible:
+   - a) only inside class
+   - b) inside and outside class using object
+   - c) only in constructor
+   - d) never
    - **Answer: b**

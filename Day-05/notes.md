@@ -1,29 +1,56 @@
-# Day 05 - Functions and Modular Programming
+# Day 05 - String Practice + OOP, Class, Object, Constructors
 
-## 1) Why Functions?
-- Reusability
-- Better readability
-- Easy testing/debugging
+## 1. String Logic Practice
+Programs practiced:
+- Replace all digits in string with `Z`
+- Print prefix pattern of a string forward and backward
 
-## 2) Function Components
-- Declaration (prototype)
-- Definition
-- Call
+## 2. OOP Basics
+- OOP = Object Oriented Programming
+- Core concepts listed:
+  1. Polymorphism
+  2. Inheritance
+  3. Data Abstraction
+  4. Encapsulation
 
-## 3) Types
-- Without args, without return
-- With args, without return
-- Without args, with return
-- With args, with return
+## 3. Class and Object
+### Class
+- User-defined datatype
+- Defined outside `main()`
+- Does not occupy object memory directly for instances
+- Contains access sections: `private`, `public`, `protected`
 
-## 4) Scope and Lifetime
-- Local variables
-- Global variables
-- `static` in functions
+### Access specifiers
+- `private`: data hidden, accessible within class
+- `public`: accessible through object
+- `protected`: mainly for inheritance
 
-## 5) Recursion (Intro)
-Function calling itself with base condition.
+### Object
+- Instance of class
+- Occupies memory
+- Size depends on data members
 
-## 6) Daily Checklist
-- [ ] Split programs into small functions
-- [ ] Solve recursive and iterative examples
+## 4. Class programs covered
+- `Book` class: input/display + compare by cost
+- `Employee` class: 3 objects + total and average salary
+
+## 5. Constructors
+Special member function:
+- Name same as class name
+- No return type
+- Called automatically when object is created
+
+### Types discussed
+1. Default constructor
+2. Parameterized constructor
+3. Copy constructor
+4. Dynamic constructor (mentioned)
+
+### Constructor overloading
+- Multiple constructors with different parameter lists in same class
+
+### Examples covered
+- Class with default values via constructor
+- Product class with fixed rate and billing calculations
+- Constructor overloading with multiple signatures
+- Copy constructor copying one object to another
