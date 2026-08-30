@@ -1,0 +1,446 @@
+for loop
+	1.simple for loop
+	2. nested for loop
+
+simple for loop
+	It is type of loop which initialize as initialization, condition and increment/decrement at time.
+Syntax
+for(initialization; condition; increment/decrement)
+{
+process statement;
+}
+1st time
+	1. initialization 
+	2. condition
+	3. process statement
+2nd time to till the condition is satisfied
+1. increment/decrement
+2. condition
+3. process statement
+
+
+
+/*
+Write a program which print series 1..2.........n
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a,n;
+	cout<<"\nEnter value for n";
+	cin>>n;
+	cout<<"\nSeries 1.2...................n";
+	for(a=1;a<=n;a)
+	{
+		cout<<"\n"<<a;
+	}
+	
+	cout<<"\nSeries "<<n<<"...........1";
+	for(a=n;a>=1;a--)
+	{
+		cout<<"\n"<<a;
+	}
+}
+
+/*
+Write a program which scan number and print factorial 
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a,n,fact=1;
+	cout<<"\nEnter value for n";
+	cin>>n;
+	//n=4 4*3*2*1
+	for(a=n;a>=1;a--)
+	{
+		cout<<"\nFactorial ="<<fact;
+		fact=fact*a;
+	}
+	cout<<"\n"<<n<<" Factorial ="<<fact;
+	//  n=4  1*2*3*4
+	fact=1;
+	for(a=1;a<=n;a++)
+	{
+		
+		fact=fact*a;
+	}
+	cout<<"\n"<<n<<" Factorial ="<<fact;
+}
+
+Nested for loop
+	It is combination of outer for loop and inner for loop.
+outer for loop is execute for row 
+and inner for is execute for column.
+inner for loop is totally depend on outer for loop.
+Note:- Generally it is used to execute pattern printing program
+Syntax
+for(initialization ; condition;increment/decrement)    //outer for loop
+	{
+		for(initialization ; condition;increment/decrement)   //inner for loop
+		{
+			process statement;
+		}   //end of inner for loop
+	} //end of outer for loop
+
+
+/*
+Write a program which print the pttern
+n=5
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * *
+* * *
+* *
+*
+
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int i,j,n;
+	cout<<"Enter value for n";
+	cin>>n;
+	for(i=1;i<=n;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			cout<<" * ";
+		}
+		cout<<"\n";
+	}
+	//----------
+	for(i=n-1;i>=1;i--)
+	{
+		for(j=1;j<=i;j++)
+		{
+			cout<<" * ";
+		}
+		cout<<"\n";
+	}
+}
+-------------------------
+
+/*
+Write a program which print the pttern
+n=5
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * *
+* * *
+* *
+*
+
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int i,j,n;
+	cout<<"Enter value for n";
+	cin>>n;
+	for(i=1;i<=n;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			cout<<" "<<j;
+		}
+		cout<<"\n";
+	}
+	
+}
+-------------------------
+
+/*
+Write a program which print the pttern
+n=5
+Aa
+Aa Bb
+Aa Bb Cc
+Aa Bb Cc Dd
+Aa Bb Cc Dd Ee
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+		int i,j,n;
+		char ch,ch1;;
+		cout<<"Ente value for n";
+		cin>>n;
+		for(i=1;i<=n;i++)
+		{
+			ch=65;
+			ch1=97;
+			for(j=1;j<=i;j++)
+			{
+				cout<<ch<<ch1<<" ";
+				ch++;
+				ch1++;
+			}
+			cout<<"\n";
+		}
+			
+
+}
+-------------------------
+Array(collection)
+	It is a group of elements with similar datatype.
+	It is also known as subscript or an index of elements.
+	Array is occupied continuous memory location.
+	Defined array as any type but index is always integer and started form Zero(0)
+	It is used upper bound index(ub index) and lower bound index(lb index);
+	Every array data is associated with index. so user can't access array data without index.
+	Array is implement with the help of loop.
+Note:- we defined array may be static may be dynamic
+Types of Array
+1. One-Dimensional Array
+2. Two-Dimensional Array
+3. String (One D Character Array)
+
+	One Dimensional Array :- It is used in row format. In this using row index access the array data.
+Syntax
+static array
+int a[5]={34,23,44,5,6},i;
+	In this a is a name of array
+	5 is a capacity of array
+	5*4 =20 byte is occupied size in memory
+
+
+/*
+Write a program which print array data
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a[5]={12,34,45,56,45},i;
+	cout<<"\nArray Data:-";
+	for(i=0;i<5;i++)
+	{
+		cout<<"\na["<<i<<"]="<<a[i];
+	}
+		
+		/*
+		a[0]= 12
+		a[1]=34
+		*/
+}
+
+Dynamic One-D Array
+syntax
+	int a[5],i;
+
+
+/*
+Write a program scan data for and print it
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a[5],i;
+	cout<<"\nArray Data:-";
+	cout<<"\nEnter Array Data";
+	for(i=0;i<5;i++)
+	{
+		cout<<"\nEnter Number a["<<i<<"]=";
+		cin>>a[i];
+	}
+	for(i=0;i<5;i++)
+	{
+		cout<<"\na["<<i<<"]="<<a[i];
+	}
+		
+		/*
+		a[0]= 12
+		a[1]=34
+		*/
+}
+
+
+/*
+Write a program scan data for array and calculate the sum of array elements
+and calculate average
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a[5],i,tot=0;
+	float avg;
+	cout<<"\nArray Data:-";
+	cout<<"\nEnter Array Data";
+	for(i=0;i<5;i++)
+	{
+		cout<<"\nEnter Number a["<<i<<"]=";
+		cin>>a[i];
+		tot=tot+a[i];
+	}
+	avg=tot/5;
+	for(i=0;i<5;i++)
+	{
+		cout<<"\na["<<i<<"]="<<a[i];
+	}
+		cout<<"\nTotal Value="<<tot;
+		cout<<"\nAverage ="<<avg;
+		
+}
+
+
+/*
+Write a program scan array and print maximum number with index
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a[5],i,max=0,x;
+	
+	cout<<"\nArray Data:-";
+	cout<<"\nEnter Array Data";
+	for(i=0;i<5;i++)
+	{
+		cout<<"\nEnter Number a["<<i<<"]=";
+		cin>>a[i];
+		if(a[i]>max)
+		{
+			max=a[i];
+			x=i;
+		}
+	}
+	
+	for(i=0;i<5;i++)
+	{
+		cout<<"\na["<<i<<"]="<<a[i];
+	}
+		cout<<"\n"<<max<<" Maximum value present at "<<x<<" Position ";
+		
+		
+}
+-------------------
+/*
+Write a program scan array 
+cacluate the sum of even numbers
+and count total odd numbers
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a[5],i,sum=0,odd=0;
+	cout<<"\nArray Data:-";
+	cout<<"\nEnter Array Data";
+	for(i=0;i<5;i++)
+	{
+		cout<<"\nEnter Number a["<<i<<"]=";
+		cin>>a[i];
+		if(a[i]%2==0)
+			sum=sum+a[i];
+			else
+			odd++;
+	}
+	
+	for(i=0;i<5;i++)
+	{
+		cout<<"\na["<<i<<"]="<<a[i];
+	}
+		cout<<"\nTotal of Even numbers ="<<sum;
+		cout<<"\nTotal Odd numbers ="<<odd;
+		
+		
+		
+}
+----------------------
+String (one D Character array)
+	It is collection of character which terminate using null '\0';
+String index start from zero.
+String is give the permission used number of in build functions which is known as string functions.
+String function execute using string.h
+
+String Function
+1. strlen()	:- It is stand for string length. It is return user length.
+Syntax
+	int variable=strlen(string);
+2. strupr() :- It is stand for string upper. It is used to convert lower string into upper string.
+syntax
+strupr(string);
+
+3. strlwr():- It is stand for string lower. It is used to convert upper string into lower string/
+syntax
+strlwr(string);
+4. strcpy():- It is used to copy source string into destination string.
+syntax
+strcpy(dest_string,source_string);
+5. strcat():- It is used to concat(join) two string an append format.
+syntax
+strcat(string1,string2);
+		//string1 is join
+6. strcmp() :- It is compare two strings using ASCII  values. If string compare then it return 0.
+if(strcmp(str1,str2)==0)
+string compare
+
+7. strrev() : it is stored string in reverse.
+syntax
+strrev(string).
+
+
+
+
+
+
+
+-------------------
+Assignments
+1. Write a program which prints the Fibonacci series
+n=10
+0
+1
+1
+2
+3
+5
+8
+
+2.  Write a program scan number 
+for example
+234
+print reverse number
+432
+3. Write a program which print pattern
+n=4
+
+A B C D
+E F G
+H I
+J
+Array 
+4. Write a program scan array which is combination of positive and negative number
+replace all negative numbers by 0
+and print total replacement.
+5. Write a program scan two array and 
+stored alternate number into third array
+6. Write a program scan array which is combination of positive and negative numbers and copy
+only positive numbers into second array and print how number copied.
+
+
+
+
+
+
+
+

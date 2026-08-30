@@ -1,0 +1,499 @@
+#include<iostream>
+using namespace std;
+main()
+{
+	char str[50];
+	cout<<"Enter String";
+	gets(str);
+	cout<<"\nString ="<<str;
+	for(int i=0;i<strlen(str);i++)
+	{
+		//if(str[i]=='0'||str[i]=='1'||str[i]=='2'||str[i]=='3'||str[i]=='4'||str[i]=='5'||str[i]==6)
+		if(str[i]>='0' && str[i]<='9')
+		str[i]='Z';
+	}
+	for(int i=0;i<strlen(str);i++)
+	{
+		cout<<"\nstr["<<i<<"]="<<str[i];
+	}
+}
+------------------------
+
+#include<iostream>
+using namespace std;
+main()
+{
+	char str[50];
+	int i,j;
+	cout<<"Enter String";
+	gets(str);
+	cout<<"\nString ="<<str<<endl;
+	for(i=0;i<strlen(str);i++)
+	{
+		for(j=0;j<=i;j++)
+		{
+			cout<<" "<<str[j];
+		}
+		cout<<"\n";
+	}
+for(i=strlen(str)-2;i>=0;i--)
+	{
+		for(j=0;j<=i;j++)
+		{
+			cout<<" "<<str[j];
+		}
+		cout<<"\n";
+	}
+}
+-------------------------------------------
+
+OOP's
+	Object Oriented Programming Lang.
+Feature
+1. Execution is bottom to top.
+2.Polymorphism
+3.Inheritance
+4.Data Abstraction
+5. Encapsulation
+
+	OOP is a combination of class and objects.
+
+class :-
+	class is a reserved keyword.
+	It is an user defined datatype which defined outside the main().
+	class is not execute itself it is execute with the help of objects and main().
+	It is not occupied any type of space in a memory
+	It is create with the help of 
+	private, public and protected member or access specifier of class
+private :-
+	In this defined any type of dynamic variables, array. which is member of class and access
+only inside the class.
+public:-
+	Inside the public defined
+	functions, constructor, destructor, static function, operator overload function, virtual function.
+	It is access inside the class as well as outside the class with the help of object and dot(.) operator.
+protected:-
+	It is used only incase of inheritance to defined variable in base class which value used in 
+a derived class.
+
+Note:- In C++ class is by default private.
+***
+object :- It is represent the class entity.
+	      It is an instance of class.
+	     related to one class user defined multiple objects and all objects work in different areas.
+	    object is occupied the space in a memory. Object size is depend on class variable.
+*** In C++ object is handle garbage value at the time of object initialization.
+
+Syntax
+class classname
+{
+	private:
+		member variable or data members
+	public:
+		defined member function ,constructor etc
+	protected:
+		defined variable inside the base class.
+};
+main()
+{
+classname object1,object2;
+}
+|
+
+/*Write a program create  Book class
+with member 
+bookid
+name 
+cost
+*/
+
+#include<iostream>
+using namespace std;
+class Book
+{
+	private:
+		int bookid;
+		char name[20];
+		float cost;
+	public:
+		void set_data()
+		{
+			cout<<"Enter Book Data as ID name and cost of book";
+			cin>>bookid>>name>>cost;
+		}
+		
+		
+		void get_data()
+		{
+			cout<<"\nBook Information";
+			cout<<"\nBook Id="<<bookid<<"\nName="<<name<<"\nCost="<<cost;
+		}
+		
+		float comp()
+		{
+			return(cost);
+		}
+		
+};
+
+main()
+{
+	Book FE,SE;
+	FE.set_data();
+	SE.set_data();
+		if(FE.comp()>SE.comp())
+			FE.get_data();
+			else
+			SE.get_data();
+	
+}
+-------------------------------------
+/*
+Write a program create Employee class
+with member empid name of employee and salary
+for three objects.
+calculate the total salary 
+and 
+average salary
+*/
+
+#include<iostream>
+using namespace std;
+class Employee
+{
+	private:
+		int id,sal;
+		char name[20];
+		
+	public:
+		void set_data()
+		{
+			cout<<"Enter  ID name and salary of Employee";
+			cin>>id>>name>>sal;
+		}
+		
+		void get_data()
+		{
+			cout<<"\nEmployee Information";
+			cout<<"\n Id="<<id<<"\nName="<<name<<"\nSalary="<<sal;
+		}
+		
+		int comp()
+		{
+			return(sal);
+		}
+		
+};
+
+main()
+{
+	Employee emp1,emp2,emp3;
+	int tot;
+	float avg;
+	emp1.set_data();
+	emp2.set_data();
+	emp3.set_data();
+	
+	emp1.get_data();
+	emp2.get_data();
+	emp3.get_data();
+	
+	tot=emp1.comp()+emp2.comp()+emp3.comp();
+	avg=tot/3;
+	cout<<"\nTotal Salary="<<tot;
+	cout<<"\nAverage "<<avg;
+}
+-----------------------------------
+Very imp concept
+Constructor
+	It is special feature of OOP.
+	It is defined in a public member of class as class name.(Give constructor name and class name should be same)
+	Constructor does not required any return data type , so it is not return a particular value.	
+***  Constructor is execute when object is created. Constructor execution is depend on compiler not
+	a user.
+	User can't stop the execution of constructor.
+*** If user assign same value to all objects so user used concept of constructor.
+** In a class user defined only one default constructor but multiple parameterized constructor.
+Types of constructor
+1. Default constructor or parameter less constructor.
+2. Parameterized constructor
+3. Copy constructor
+4. Dynamic constructor
+
+1. Default Constructor
+			In this set the values to member variable of class.
+			In a one class defined only one default constructor
+Syntax
+classname()
+{
+variable=value;
+}
+
+/*
+Example of default constructor
+*/
+
+#include<iostream>
+using namespace std;
+class Sample
+{
+	private:
+		int a,b;
+		float c;
+	public:
+		//default constructor
+		Sample()
+		{
+			a=100;
+			b=450;
+			c=400.122f;
+		}
+		void get_data()
+		{
+	
+			cout<<"\n A="<<a<<"\nB="<<b<<"\nC="<<c;
+		}
+				
+};
+
+main()
+{
+Sample test_obj;
+test_obj.get_data();
+Sample ss;
+ss.get_data();
+}
+
+----------------------------------
+/*
+Write a program create product class 
+with member product name rate and quantity
+set the rate as =450.50
+calculate the amount rate * quantity
+discount=10%on amount
+netamount=amount-discout
+(rate value not input through user it is set in a constructor)
+*/
+
+#include<iostream>
+using namespace std;
+class Product
+{
+	private:
+		char name[20];
+		int qty;
+		float dis,rate,amt,net;
+	public:
+		//default constructor
+		Product()
+		{
+			rate=450.50f;
+					
+		}
+		void set_data()
+		{
+			cout<<"Enter prodcut name and quantity";
+			cin>>name>>qty;
+			amt=rate*qty;
+			dis=amt*10/100;
+			net=amt-dis;
+		}
+		void get_data()
+		{
+			cout<<"\nProduct Information";
+			cout<<"\n Product Name="<<name<<"\nRate="<<rate<<"\nQuantity="<<qty;
+			cout<<"\n Amount="<<amt<<"\nDiscount="<<dis<<"\nNet Amount="<<net;
+		}
+				
+};
+
+main()
+{
+	Product p1,p2;
+	p1.set_data();
+	p1.get_data();
+	p2.set_data();
+	p2.get_data();
+}
+
+------------------------
+
+2.) Parameterized constructor
+		In class user defined more than one parameterized constructor.
+		It is execute according to their calling and sequence of parameter.
+	Syntax
+	classname(parameter)
+	{
+	variable=parameter;
+	}
+
+/*
+Example of default and parameterized constructor
+*/
+
+#include<iostream>
+using namespace std;
+class Sample
+{
+	private:
+		int a,b;
+		float c;
+	public:
+		//default constructor
+		Sample()
+		{
+			a=100;
+			b=450;
+			c=400.122f;
+		}
+		//parameterized constructor
+		Sample(int x,int y)
+		{
+		a=x;
+		b=y;
+		}
+		Sample(int x,int y,float z)
+		{
+			a=x;
+			b=y;
+			c=z;
+		}
+		void get_data()
+		{
+	
+			cout<<"\n A="<<a<<"\nB="<<b<<"\nC="<<c;
+		}
+				
+}; //terminate
+main()
+{
+	Sample myobj(78,50,7.8f);
+	myobj.get_data();
+	Sample obj1;
+	obj1.get_data();
+	Sample obj(10,20); //parameter
+	obj.get_data();
+	
+}
+
+3. Copy  Constructor :- It is type of parameterized constructor.
+				      It is used to copy the value of one object to another object variable.
+Syntax
+classname(classname &obj)
+{
+variable=obj.variable;
+}
+
+/*
+Example of default and parameterized constructor
+*/
+
+#include<iostream>
+using namespace std;
+class Sample
+{
+	private:
+		int a,b;
+		float c;
+	public:
+		//default constructor
+		Sample()
+		{
+			a=100;
+			b=450;
+			c=400.122f;
+		}
+		//copy constructor
+		
+		Sample(Sample &ob)  //ob is a formal object which represent the obj1 object of main()
+		{
+			a=ob.a;
+			
+		}
+		
+		void get_data()
+		{
+	
+			cout<<"\n A="<<a<<"\nB="<<b<<"\nC="<<c;
+		}
+				
+}; //terminate
+main()
+{
+
+	Sample obj1;
+	obj1.get_data();
+	Sample myobj(obj1);  //obj1 it is an object //copy constructor
+	myobj.get_data();
+	
+	
+}
+
+
+-----------------------------------
+
+Assignments
+1. Write a program create class of student and print the marksheet of two students.
+2. Write a program create a class Bank_fd and print the FD of 3 account holders.
+si=p*r*n/100
+amount=p+si;
+3. Write a program of constructor overloading
+	default constructor
+	parameterized constructor
+	copy constructor
+
+4. 
+Write a program create Employee class
+with member id, name and salary
+read total attendance of employee in days (365 days)
+if present days >=200 the update the salary by 5000rs.
+other wise update salary by 2500
+for two employees(object)
+Enter id name and salary
+12
+Priyanka
+salary =25000
+Enter present days
+175
+salary=25000+2500
+
+Enter id name and salary
+12
+Pranav
+salary =75000
+Enter present days
+275
+salary=75000+5000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

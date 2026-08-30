@@ -1,0 +1,643 @@
+control statements and Loops
+
+Control statements 
+		In Programming we used
+if....else,
+switch
+	is a type of control or conditional statement.
+
+if....else statements
+	It is used to print or execute true statement if condition is satisfied other wise it provide
+false statement.
+( if condition is satisfied the compiler provide true statement other wise provide false statement)
+Types of if...else
+1. simple if
+2. if...else
+3. Nested if...else
+4. if..else block or embedded if ...else
+Note :- Only comparison operator is used when give the condition.
+1. simple if
+	It is used when condition is satisfied then only required ans.
+syntax
+	if(condition)
+	true statement;
+/*
+Write a program scan number and print the number is positive.
+1........true
+0.........false
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a;
+	cout<<"Enter value for a";
+	cin>>a;
+	if(a>0)  
+	cout<<"\nNumber Positive";
+	
+}
+
+2. if...else
+	When condition is satisfied then it provide true statement other wise it provide false statement
+Syntax
+if (condition)
+true statement;
+	else
+		false statement;
+
+/*
+Write a program scan number and print the number is positive.
+1........true
+0.........false
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a;
+	cout<<"Enter value for a";
+	cin>>a;
+	if(a>0)  
+	cout<<"\nNumber Positive";
+	else
+	cout<<"\nNegative";
+	
+}
+--------------------
+
+/*
+Write a program scan two number and print largest number
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a,b;
+	cout<<"Enter value for a and b";
+	cin>>a>>b;
+	if(a>b)  
+	cout<<"\nA largest";
+	else
+	cout<<"\nB Largest";
+	
+}
+
+/*
+Write a program scan number and print number is odd or even
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a;
+	cout<<"Enter value for a ";
+	cin>>a;
+	if(a%2== 0)  
+	cout<<"\nEven Number";
+	else
+	cout<<"\nOdd Number";
+	
+}
+
+3.  Nested if ..else 
+		In this give multiple if and else statement but at time execute only one if statement or
+one else statement.
+
+Syntax
+	if(condition)
+	true ans;
+		else
+			if(condition)
+		          true ans;
+				else
+					false ans;
+
+/*
+Write a program scan 3 numbers and print  largest Number
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a,b,c;
+	cout<<"Enter value for a,b and C ";
+	cin>>a>>b>>c;
+	if(a>b && a>c)  
+	cout<<"\na largest";
+	else
+		if(b>a && b>c)  
+		cout<<"\nb largest";
+		else
+			cout<<"\nc largest";
+	
+	
+}
+-----------------------
+/*
+Write a program scan number 
+	print number between 1...250
+	print number between 251...500
+	print number between 501... 750
+	other wise number not in range 1 to 750
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a;
+	cout<<"Enter value for a ";
+	cin>>a;
+	if(a>=1 && a<=250)
+	cout<<"\nnumber between 1...250";
+	else
+		
+		if(a>=251 && a<=500)
+			cout<<"\nnumber between 251..500";
+			else
+				if(a>=501 && a<=700)
+				cout<<"\nnumber between 501...700";
+				else
+				cout<<"\nNumber Not In range 1   to 700";
+				
+}
+
+4. if..........else block or embedded if else
+	When user provide more than one statement related if condition or else statement that time
+give all statement in a group format.
+		syntax
+		if(condition)
+		{
+		true statements;
+		}
+		else
+		{
+		false statement;
+		}
+/*
+Write a program scan number 
+	print number between 1...250
+	print number between 251...500
+	print number between 501... 750
+	other wise number not in range 1 to 750
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a,b;
+	cout<<"Enter value for a and b";
+	cin>>a>>b;
+	if(a>b)  
+	{
+	cout<<"\nA largest";
+	cout<<"\nA="<<b;
+}
+	else
+	{
+	cout<<"\nB Largest";
+	cout<<"\nB="<<b;
+	}
+	cout<<"\nEnd of program";	
+	
+}
+------------------------------
+switch
+		It is type of condition which used with
+case
+break 
+default keywords
+		It is used to execute menu driven program. It is provide ans on choice variable value.
+case :- In one switch provide multiple case statement but at time execute only one case related
+to choice variable.
+
+break:- it is used to terminate one case through another.
+default :- if choice case is not present the default provide default ans.
+syntax
+switch(choice_variable)
+{
+case 1: process statement;
+break;
+case 2: process statement;
+break;
+default:
+	default answer;
+}
+
+/*
+Write a program of menu driven
+1.Addition
+2.Subtraction
+3.Multiplication
+4. Division
+
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a,b,c,ans;
+	cout<<"Enter value for a and b";
+	cin>>a>>b;
+	cout<<"1.Addition\n2.Subtraction\n3.Multiplication\n4. Division";
+	cout<<"Enter Choice";
+	cin>>ans;
+	switch(ans)  //switch(1)
+	{
+		case 1: 
+			c=a+b;
+			cout<<"\nAddition="<<c;
+		break;
+		case 2: 
+			c=a-b;
+			cout<<"\nSubtraction="<<c;
+		break;
+		case 3: 
+			c=a*b;
+			cout<<"\nMultiplication="<<c;
+		break;
+		case 4: 
+			c=a/b;
+			cout<<"\nDivision="<<c;
+		break;
+		default: 
+			cout<<"Invalid Choice";
+	}
+	
+	
+	
+	
+}
+---------------------------------
+/*
+Write a program scan character and print character is vowel or not
+a e i o u
+A E I O U
+
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	char ch;
+	cout<<"Enter Character";
+	cin>>ch;
+	switch(toupper(ch))
+	{
+		case 'A': 
+			cout<<"Vowel";
+		break;
+		case 'E': 
+			cout<<"Vowel";
+		break;
+		
+		case 'I': 
+			cout<<"Vowel";
+		break;
+		
+		case 'O': 
+			cout<<"Vowel";
+		break;
+		
+		case 'U': 
+			cout<<"Vowel";
+		break;
+			default: cout<<"\nNot vowel";
+		
+	}
+				
+	
+	
+}
+
+toupper()  :- It is used to convert single lower character into upper character.
+tolower()   :- It is used to convert single upper character into lower character.
+It is apply only single character
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------
+Loop's
+	It is cycle process.
+	When user know what is start, what is process and what is a stop that time used the concept of loop.
+****
+To execute the loop user required
+initialization
+condition
+increment/decrement
+***
+Loop is execute either finite way or infinite way. loop never infinite.
+***
+Time complexity is depend on loop.
+
+Note:- It is repetition of statement till the condition is satisfied.
+Types of Loop
+1. while
+2. do ....while
+3. for loop
+	i)simple for loop
+	ii)nested for loop
+
+1. While 
+	It is a loop which execute statement one by one.
+syntax
+initialization;
+	while(condition)
+	{
+	 process statement;
+	increment/decrement.
+	}
+Execution way
+1. initialization
+2. condition
+3. if condition satisfied then process statement/increment or decrement.
+
+/*
+Write  a program print series 1..2.........n
+and
+n----------------------------1
+
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+
+		int a=1,n;
+		cout<<"\nEnter value for n";
+		cin>>n;
+		cout<<"\nSeries 1.2.3............."<<n;
+		while(a<=n)  
+		{
+			cout<<"\n"<<a;
+			a++;
+		}
+	
+		cout<<"\nSeries n.............1";		
+		a=n;
+		while(a>=1)   //10>=1
+		{
+			cout<<"\n"<<a;
+			a--;
+		}
+	
+	
+}
+----------
+/*
+Write  a program which print the squre of 1 to 5
+1 square =1
+2 square =4
+.
+
+5 square =25
+
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+
+		int a=1,n;
+		cout<<"\nSquare 1......5";
+		while(a<=5)  
+		{
+			n=a*a;
+			cout<<"\n"<<a<<"  Square ="<<n;
+			a++;
+		}	
+		
+}
+-----------------
+/*
+Write  a program scan 5 numbers and print the sum
+
+
+
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+
+		int a=1,sum=0,n;
+		cout<<"Enter 5 Numbers";
+		while(a<=5)  
+		{
+			cout<<"\nEnter Number=";
+			cin>>n;
+			sum=sum+n;  //sum+=n;
+			a++;
+		}
+	cout<<"\nSum="<<sum;
+	
+	
+}
+
+/*
+Write  a program scan number and print the factorial of number
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+		int a,fact=1,n;
+			cout<<"\nEnter Number=";
+			cin>>n;
+		a=n;
+		while(n>=1)  
+		{
+			fact=fact*n;
+			n--;
+		}
+	cout<<"\n"<<a<<" Factorial="<<fact;
+	
+	
+}
+
+------------------
+
+/*
+Write  a program scan x and y 
+and perform x^y
+
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int x,y,a=1,ans=1;
+	cout<<"Enter value for x and y";
+	cin>>x>>y;
+	while(a<=y)
+	{
+		ans=ans*x;
+		a++;
+	}
+	cout<<"\nX ^ Y="<<ans;
+	
+	
+}
+---------------------
+
+/*
+Write  a program scan 5 numbers and print maximum number
+
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int n,a=1,max=0;
+	cout<<"Enter 5 numbers";
+	
+	while(a<=5)
+	{
+	cout<<"\nEnter Number=";
+	cin>>n;
+		if(n>max)
+		max=n;
+	
+	a++;
+	}
+
+cout<<"\nMaximum="<<max;
+	
+	
+}
+
+/*
+Write  a program which defined loop 1 to 100
+but print series 
+1...........7
+
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a=1;
+	while(a<=100)
+	{
+		if(a<=7)
+		cout<<"\n"<<a;
+		else
+		break;
+		
+	a++;
+	}
+	
+}
+/*
+Write  a program which scan number print number is prime or not
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int n,a=2,flag=1;
+	cout<<"\nEnter value for n";
+	cin>>n;
+	while(a<n)
+	{
+		if(n%a==0)
+		{
+			flag=0;
+			break;
+		}
+		a++;
+	}
+	if(flag==1)
+	cout<<"\nNumber Prime";
+	else
+	cout<<"\nNot Prime Number";
+
+	
+}
+--------------------------------
+do---- while
+	It is type of loop which execute with one draw back i.e first time without condition check,
+process statement and increment or decrement statement will be execute.
+Syntax
+initialization;
+do
+{
+process statement;
+increment/decrement'
+}
+while(condition);
+Execution way
+1. initialization
+2. process statement
+3. increment/decrement.
+4.condition.
+
+/*
+Write  a program which print series 1............n
+
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+int a=1,n;
+		cout<<"\nEnter value for n";
+		cin>>n;
+		cout<<"\nSeries 1.2.3............."<<n;
+		do
+		{
+			cout<<"\n"<<a;
+			a++;
+		}
+while(a<=n);  
+	
+}
+---------------------------------
+Assignment
+1. Write a program scan year and print year is leap year or not.
+2. Write a program scan number and print number is divi sable  by 7 or not
+3. Write a program scan age of person and minor person, major person or senior citizen other
+wise invalid age
+4.  Write a program which print the marksheet of student with class.
+5. Write  a program scan number between 0 to 10
+Enter number 4
+FOUR
+6. Write a program which create menu
+	1.  Largest from 3 numbers
+	2. Person is eligible for voting
+
+Loop
+7. Write a program which scan 10 number and count total even number.
+8. Write a program which print leap year between 2000 to 2026 and count total leap years
+9. Write a program which scan number and calculate the sum of digit
+  for example
+number =547
+Sum =16
+10.Write a program which print even number series 1 to 100

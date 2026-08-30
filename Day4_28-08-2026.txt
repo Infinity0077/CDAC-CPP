@@ -1,0 +1,545 @@
+String (one D Character array)
+	It is collection of character which terminate using null '\0';
+String index start from zero.
+String is give the permission used number of in build functions which is known as string functions.
+String function execute using string.h
+
+String Function
+1. strlen()	:- It is stand for string length. It is return user length.
+Syntax
+	int variable=strlen(string);
+2. strupr() :- It is stand for string upper. It is used to convert lower string into upper string.
+syntax
+strupr(string);
+
+3. strlwr():- It is stand for string lower. It is used to convert upper string into lower string/
+syntax
+strlwr(string);
+4. strcpy():- It is used to copy source string into destination string.
+syntax
+strcpy(dest_string,source_string);
+5. strcat():- It is used to concat(join) two string an append format.
+syntax
+strcat(string1,string2);
+		//string1 is join
+6. strcmp() :- It is compare two strings using ASCII  values. If string compare then it return 0.
+if(strcmp(str1,str2)==0)
+string compare
+
+7. strrev() : it is stored string in reverse.
+syntax
+strrev(string).
+
+/*
+Write a program scan string and calculate the length of string.
+print string index wise
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	char str[100];
+	int len;
+	cout<<"\nEnter String=";
+	gets(str);
+	cout<<"\nString= "<<str;
+	cout<<"\nLength of string ="<<strlen(str);
+	len=strlen(str);
+	for(int i=0;i<len;i++)
+	{
+		cout<<"\nstr["<<i<<"]="<<str[i];
+	}
+	
+}
+-------------------------------------------
+/*
+Write a program scan string
+and convert in upper case
+and 
+lower case
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	char str[100];
+	
+	cout<<"\nEnter String=";
+	gets(str);
+	cout<<"\nString= "<<str;
+	strupr(str);
+	cout<<"\nUpper String= "<<str;
+	strlwr(str);
+	cout<<"\nLower String= "<<str;
+}
+/*
+Write a program scan string and copy into another string
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	char str1[100],str2[100];
+	
+	cout<<"\nEnter String=";
+	gets(str1);
+	strcpy(str2,str1);
+	cout<<"\nMain String= "<<str1;
+	cout<<"\nCopy String= "<<str2;
+	
+}
+/*
+Write a program scan two strings and join using strcat
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	char str1[100],str2[50];
+	
+	cout<<"\nEnter String=";
+	gets(str1);
+	cout<<"\nEnter String=";
+	gets(str2);
+	
+	strcat(str1,str2);
+	cout<<"\nJoin String= "<<str1;
+	
+	
+}
+/*
+Write a program scan tow strings and compare
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	char str1[100],str2[50];
+	
+	cout<<"\nEnter String=";
+	gets(str1);
+	cout<<"\nEnter String=";
+	gets(str2);
+	
+	if(strcmp(str1,str2)==0)	
+	cout<<"\nString compare";
+	else
+	cout<<"\nString Not compare";
+	
+}
+------------------------
+Two Dimensional Array (Two D Array)
+	It is used to stored the data in a row and column format. 
+	It is used to stored the elements in a matrix format.
+	To implement we required row index and column index.
+	Required nested for loop.
+	Each data is associated with row index and column index.
+Example
+int a[3][2],i,j;
+	
+	a is a name of array
+	3 is a size of row
+	2 is a size of column
+	i :- is used to row index
+	j:- is used to column index
+3*2=6 numbers stored into a array
+6*4 byte is occupied
+
+/*
+Write a program scan numbers and print in matrix format
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a[3][2],i,j;
+	cout<<"Enter Array Data=";
+	for(i=0;i<3;i++)  //row  i=0
+	{
+		for(j=0;j<2;j++)  //colum j=0
+		{
+			cout<<"\nEnter value for a["<<i<<"]["<<j<<"]=";
+			cin>>a[i][j];   //a[0][0]
+		}
+	}
+	
+	cout<<"\nMATRIX";
+	for(i=0;i<3;i++) 
+	{
+		for(j=0;j<2;j++) 
+		{
+			cout<<" "<<a[i][j];
+		}
+		cout<<"\n";
+	}
+	
+}
+
+/*
+Write a program scan matrix 
+and print maximum number with row index and column index
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int a[3][2],i,j,max=0,x,y;
+	cout<<"Enter Array Data=";
+	for(i=0;i<3;i++)  //row  i=0
+	{
+		for(j=0;j<2;j++)  //colum j=0
+		{
+			cout<<"\nEnter value for a["<<i<<"]["<<j<<"]=";
+			cin>>a[i][j];   //a[0][0]
+			if(a[i][j]>max)
+			{
+				max=a[j][j];
+				x=i;
+				y=j;
+			}
+		}
+	}
+	
+	cout<<"\nMATRIX";
+	for(i=0;i<3;i++) 
+	{
+		for(j=0;j<2;j++) 
+		{
+			cout<<" "<<a[i][j];
+		}
+		cout<<"\n";
+	}
+	
+	cout<<"\n"<<max<< "Value present at "<<x<<"row and "<<y<<" column";
+}
+
+----------------------------
+Function:-
+		Every function required a specific parameter(argument) and with the help of parameter
+every function return a specific value.
+Types of Function 
+	1. Standard function :-
+			It is ready with code and it has a fixed syntax.
+			It is execute with the help of header file.
+	2. User Defined Function(UDF)
+		1.It is set of instruction.
+		2.One time creation and multiple used with different argument is a main purpose of function.
+	     ***3. Function is not execute it self. It is execute with the help of main()
+		4. UDF instruction is created by user.
+Note
+	UDF, Structure and class is not execute itself. it is execute with the help of main()
+
+Terms which used at the time function creation
+1. with return function
+		It is create with help of int, float, double, char, string, class name, struct name.
+It is strictly return a value.
+Syntax
+	return datatype function_name(formal parameter)
+	{
+		variable define;
+		process statement;
+	        if required print statement
+		return(value); 
+	}
+
+2. without return function
+		It is create using void keyword.
+		In this input process and output is possible.
+		It is not return any value.
+Syntax
+	void function_name(formal parameter)
+	{
+		variable define;
+		process statement;
+	        print statement;
+		
+	}
+
+3. actual argument or parameter
+		It means variable, array or object which defined in a main and used inside the function
+with the help of actual argument.
+4. formal argument or parameter
+		It is represent the actual parameter or argument value.
+5. call by value :- It is used only value not used main address of variable array or object.
+
+6. call by ref (pointer)
+Syntax
+return datatype function_name(argument)
+{
+
+}
+main()
+{
+function(actual_argument);
+}
+/*
+Example of UDF
+*/
+#include<iostream>
+using namespace std;
+//function 
+void myfun()
+{
+	cout<<"\nHappy Raksha Bandhan";
+}
+
+main()
+{
+		
+		cout<<"\nWelcome";
+		myfun(); //call function
+		cout<<"\nEnd";
+}
+/*
+Write a program scan two numbers and perform the addition
+*/
+#include<iostream>
+using namespace std;
+//without return function
+void add(int x,int y)  //x and y is formal argument which represent the value of a and b
+{
+	cout<<"\nAddition ="<<x+y;
+	
+}
+main()
+{
+		int a,b;
+		add(12,70);
+		cout<<"Enter value for a and b";
+		cin>>a>>b;  // a=10  b=5
+		add(a,b);   // add is name of function, a and b is a actual argument
+		
+
+
+}
+-----------------------
+/*
+Write a program scan number and print the square of number using function.
+create cube function and pass square ans.
+
+*/
+#include<iostream>
+using namespace std;
+//with return 
+int sq(int a) //2
+{
+	return(a*a); //2*2
+}
+
+void cube(int p)
+{
+	cout<<"\nCube ="<<p*p*p;
+}
+main()
+{
+	int n,ans;
+	cout<<"Enter value for n";
+	cin>>n;
+	ans=sq(n);   //n=2
+	//ans=4
+	cout<<"\nSquare of"<<n<<"="<<ans;
+	cube(ans);
+	
+}
+
+/*
+Write a program scan array and calculate the addition of array using function
+*/
+#include<iostream>
+using namespace std;
+void myfun(int x[])
+{
+	int sum=0;
+	for(int i=0;i<5;i++)
+	{
+		sum=sum+x[i];
+	}
+	cout<<"\nSum="<<sum;
+}
+main()
+{
+	int a[5],i;
+	cout<<"Enter Array";
+	for(i=0;i<5;i++)
+	{
+		cout<<"\nEnter a["<<i<<"]=";
+		cin>>a[i];
+	}
+	for(i=0;i<5;i++)
+	{
+		cout<<"\n a["<<i<<"]="<<a[i];
+		
+	}
+	
+	myfun(a);
+}
+------------------------------------------------------
+datatype
+	i) in build Data type
+		int, long, float, double, char, string
+	ii) User Defined Data type
+		Which is created outside the main program but execute using main program.
+			i) struct (structure) ii) class iii)Enum 
+
+Structure
+		It is an user defined data type which create using struct keyword.
+		It is create outside the main()
+		It is execute with the help of main() and object of structure.
+		Inside the struct defined only dynamic variable. It is used for distortion purpose.
+		Related to one struct used defined multiple objects.
+		All objects work in different area.
+***		struct variable is access in main with the help of object and dot(.) operator
+***     object size is depend of struct variable.
+
+Syntax
+	struct struct_name
+	{
+		variable defined.
+	};
+	main()
+	{
+	  struct struct_name object1,object2;
+	}
+	
+note :- Only struct variable is access with the help of object.
+		
+/*
+Write a program scan information of two books and print it
+*/
+#include<iostream>
+using namespace std;
+struct book
+{
+	int bookid;
+	char name[20];
+	float cost;	
+};
+main()
+{
+	struct book b1,b2; //b1 and b2 is a object
+	int x;
+	cout<<"Enter Book id name of book and cost of book";
+	cin>>b1.bookid>>b1.name>>b1.cost;
+	cout<<"Enter Book id name of book and cost of book";
+	cin>>b2.bookid>>b2.name>>b2.cost;
+	
+	cout<<"\nBook 1 Information";
+	cout<<"\nId="<<b1.bookid<<"\nName ="<<b1.name<<"\nCost ="<<b1.cost;
+	cout<<"\nBook 2 Information";
+	cout<<"\nId="<<b2.bookid<<"\nName ="<<b2.name<<"\nCost ="<<b2.cost;
+}
+
+/*
+Struct with array
+Write a program scan 10 employee information and calculate the total salary and average
+salary.
+*/
+#include<iostream>
+using namespace std;
+struct Employee
+{
+	int id,sal;
+	char name[20];
+	};
+main()
+{
+	struct Employee emp[5];
+	int tot=0,i;
+	float avg;
+	for(i=0;i<5;i++)
+	{
+	cout<<"Enter  id name salary";
+	cin>>emp[i].id>>emp[i].name>>emp[i].sal;
+	tot=tot+emp[i].sal;
+	}
+		
+	avg=tot/5;
+	
+	cout<<"\nEmployee  Information";
+	for(i=0;i<5;i++)
+	{
+	cout<<"\nId="<<emp[i].id<<"\nName ="<<emp[i].name<<"\nSalary="<<emp[i].sal;	
+	}
+	
+	cout<<"\nTotal salary ="<<tot<<"\nAverage Salary ="<<avg;
+}
+
+---------------------
+
+cout<<"\nEmployee  Information";
+	cout<<"\nEmployee Id       Name            Salary";
+	cout<<"\n------------------------------------------";
+	for(i=0;i<5;i++)
+	{
+	cout<<"\nId="<<emp[i].id<<"\tName ="<<emp[i].name<<"\tSalary="<<emp[i].sal;	
+	}
+	cout<<"\n------------------------------------------";
+
+
+-------------------------------------------------------
+Assignments
+1. Write a program scan string 
+scan character,
+scan replace character and perform find and replacement
+print total replacements
+Example
+enter string
+have a nice day
+enter character
+a
+enter replace character 
+Z
+hZve Z nice dZy
+Total Replacement 3
+
+2. Write a program scan string and print total empty space,and fill the empty space with $sign
+Example
+Enter String
+Have A Nice Day
+Total Empty space=3
+Have$A$Nice$Day
+3. Write a program scan string and replace all dight with Z
+Enter String
+flat no 807 sai park A5 Wing
+flat no ZZZ sai park AZ Wing
+4. Write program scan string and print pattern
+Enter Tring
+CDAC
+C
+C D
+C D A
+C D A C
+C D A
+C D
+C
+
+5. Write a program scan string and print total vowels.
+Example
+have a nice day 
+Total vowels =6
+
+6. Write a program scan string and print vowels
+have a nice day 
+a=3
+e=2
+i=1
+o=0
+u=0
+7. Write a program scan number and print factorial of number using with return function.
+8. Write a program scan array and calculate sum and average using with return function
+9. Write a program scan string and calculate the length of string using function
+10. Write a program scan number and calculate the sum of digit using function
+11. Write a program scan two string and join the string and stored into third string
+12. Write a program scan string and print string is palindrome or not
+
+
+
+
+
+
+
+
+
+
+
+
